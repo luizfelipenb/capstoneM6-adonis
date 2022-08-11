@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./headerBar.css" media="screen">
+</head>
+<body>
+    <header class="headerContainer">
+        <figure class="figureContainer">
+            <img src="./logo.svg" alt="Logo MotorShop">
+        </figure>
+        <section class="navigationSection">
+            <nav class="auctionNav">
+                <button class="boldButton">Carros</button>
+                <button class="boldButton">Motos</button>
+                <button class="boldButton">Leilao</button>
+            </nav>
+            <div class="divider"></div>
+            <div class="mobileProfileMenu">
+                @include('partials/burguerMenu')
+            </div>
+            <div class="desktopProfileMenu">
+                <button class="boldButton">Fazer Login</button>
+                <button class="borderButton">Cadastrar</button>
+            </div>
+        </section>
+    </header>
+</body>
+</html>

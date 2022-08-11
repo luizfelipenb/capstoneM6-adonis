@@ -1,0 +1,23 @@
+.auctionListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+.listContainer {
+  display: flex;
+  gap: 8px;
+  overflow-x: scroll;
+}
+
+.lastTitle {
+  font-weight: 600;
+  font-size: 24px;
+  color: #000;
+}
+
+.arrowIcon {
+  width: 35px;
+  height: 14px;
+  background-color: var(--color-white);
+}
