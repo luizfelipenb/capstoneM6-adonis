@@ -1,0 +1,19 @@
+@layout('layouts/main')
+
+@section('mainLayout')
+<form action="{{route('user_register')}}" class="formContainer" method="POST">
+    {{ csrfField() }}
+
+    <h2 class="formTitle">Cadastro</h2>
+    <section class="personalInfo">
+        <div class="inputDiv">
+            <label for="" class="inputLabel">Nome</label>
+            <input type="text" name="name" id="">
+            @if(flashMessages.has('errors.name'))
+            <p> {{ flashMessages.get('errors.name') }} </p>
+            @end
+        </div>
+    </section>
+    <button type="submit">Enviar</button>
+</form>
+@end

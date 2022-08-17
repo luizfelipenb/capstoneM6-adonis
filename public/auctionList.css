@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 37px;
+  padding-left: 12px;
 }
 
 .listContainer {
@@ -10,14 +11,123 @@
   overflow-x: scroll;
 }
 
-.lastTitle {
+.listTitle {
   font-weight: 600;
   font-size: 24px;
   color: #000;
 }
 
-.arrowIcon {
-  width: 35px;
-  height: 14px;
-  background-color: var(--color-white);
+.card {
+  background-image: url("https://cdn.autoportal.com/img/new-cars-gallery/porsche/macan/colors/fd7a995f2dad2184603b14c31b3b1fd7.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rgbBackgroundContainer {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.29) 0%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 33px 31px 33px 22px;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.auctionDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auctionDetails > h3 {
+  color: var(--color-grey10);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.auctionDetails > p {
+  color: var(--color-grey5);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.profileDetails {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileDetails > div {
+  background-color: var(--color-brand1);
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.profileDetails > h3 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-white);
+}
+
+.announceDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.announceDetails > div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.vehicleDetails {
+  padding: 4px 8px;
+  background-color: var(--color-brand4);
+  color: var(--color-brand1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-white);
+}
+
+.auctionAccessButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-brand1);
+  color: var(--color-white);
+  border-radius: 0px 0px 4px 4px;
+  padding: 22px 31px 22px 22px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 0px;
+  width: 100%;
+}
+
+.auctionAccessButton > svg {
+  width: 32px;
+  fill: var(--color-white);
 }

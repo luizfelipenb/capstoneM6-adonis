@@ -21,6 +21,4 @@
 import Route from "@ioc:Adonis/Core/Route";
 import "./user.routes";
 
-Route.get("/", async ({ view }) => {
-  return view.render("main");
-});
+Route.get("/", "MainPagesController.view");

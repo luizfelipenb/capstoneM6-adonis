@@ -12,6 +12,16 @@ body {
   min-height: 100vh;
   background-color: var(--color-grey10);
   color: var(--color-grey1);
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lexend", sans-serif;
 }
 
 body,
@@ -41,6 +51,9 @@ a:visited {
 
 .mainContainer {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
 }
 
 :root {
