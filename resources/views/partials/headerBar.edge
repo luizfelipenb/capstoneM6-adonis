@@ -1,6 +1,8 @@
     <header class="headerContainer">
         <figure class="figureContainer">
-            <img src="./logo.svg" alt="Logo MotorShop">
+            <a href="/">
+                <img src="./logo.svg" alt="Logo MotorShop" id="logo">
+            </a>
         </figure>
         <section class="navigationSection">
             <nav class="auctionNav">
@@ -14,11 +16,11 @@
             </div>
             <div class="desktopProfileMenu">
                 <button class="boldButton">Fazer Login</button>
-                <button class="borderButton">Cadastrar</button>
+                <a class="borderButton" href="/register">Cadastrar</a>
             </div>
         </section>
     </header>
-    <section class="dropDownContainer">
+    <section id="dropDownContainer">
         <nav class="mobileNav">
             <a href="#" target="_blank">Carros</a>
             <a href="#" target="_blank">Motos</a>
@@ -26,6 +28,19 @@
         </nav>
         <div class="userDivContainer">
             <a href="#" target="_blank">Fazer Login</a>
-            <a href="#" target="_blank" class="registerLink">Cadastrar</a>
+            <a href="/register"  class="registerLink">Cadastrar</a>
         </div>
     </section>
+
+    <script>
+        const dropDownContainer = document.getElementById("dropDownContainer")
+        const dropDownTrigger = document.getElementById("hamburguerContainer")
+
+        let isOpen = false
+        dropDownContainer.className = isOpen ? "dropDownContainer" : "hidden" 
+        function dropDownHandler(){
+            isOpen = !isOpen  
+            dropDownContainer.className = isOpen ? "dropDownContainer" : "hidden" 
+        }
+        dropDownTrigger.addEventListener("click", dropDownHandler)
+    </script>

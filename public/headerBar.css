@@ -1,9 +1,11 @@
 .headerContainer {
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px;
   height: 80px;
+  border-bottom: 2px solid var(--color-grey6);
 }
 
 .figureContainer {
@@ -57,6 +59,9 @@
   flex-direction: column;
   z-index: 100;
   background-color: var(--color-white);
+  -webkit-box-shadow: 0px 7px 13px -6px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 0px 7px 13px -6px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 7px 13px -6px rgba(0, 0, 0, 0.68);
 }
 
 .mobileNav {
@@ -68,7 +73,6 @@
   line-height: 28px;
   color: var(--color-grey2);
   padding: 32px 16px;
-  border-top: 2px solid var(--color-grey4);
   border-bottom: 2px solid var(--color-grey4);
 }
 
@@ -99,6 +103,11 @@
 .registerLink:visited {
   color: var(--color-grey0);
 }
+
+.hidden {
+  display: none;
+}
+
 @media screen and (min-width: 900px) {
   .auctionNav {
     display: flex;
