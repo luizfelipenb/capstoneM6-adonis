@@ -2,5 +2,15 @@
     <footer class="footerContainer">
         <img src="./footerLogo.svg" alt="footer logo" class="footerLogo">
         <span class="rights">© 2022 -  Todos os direitos reservados.</span>
-        <button class="backTopButton">^</button>
+        <button class="backTopButton" id="backTopAction">^</button>
     </footer>
+    <script>
+        function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+        }
+        const button = document.getElementById("backTopAction");
+        button.addEventListener("click", scrollToTop);
+    </script>

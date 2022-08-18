@@ -51,6 +51,54 @@
   display: none;
 }
 
+.dropDownContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  background-color: var(--color-white);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--color-grey2);
+  padding: 32px 16px;
+  border-top: 2px solid var(--color-grey4);
+  border-bottom: 2px solid var(--color-grey4);
+}
+
+.userDivContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 12px;
+  gap: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--color-grey2);
+}
+
+.registerLink {
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid var(--color-grey4);
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  color: var(--color-grey0);
+  padding: 14px 0;
+}
+
+.registerLink:visited {
+  color: var(--color-grey0);
+}
 @media screen and (min-width: 900px) {
   .auctionNav {
     display: flex;
@@ -78,5 +126,9 @@
     gap: 44px;
     align-items: center;
     margin: 0 44px 0 44px;
+  }
+
+  .dropDownContainer {
+    display: none;
   }
 }
