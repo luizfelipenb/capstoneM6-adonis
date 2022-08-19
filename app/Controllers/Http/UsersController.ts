@@ -9,6 +9,8 @@ export default class UsersController {
   public async store({ request, response }) {
     const body = await request.validate(CreateUserValidator);
 
-    return body;
+    delete body.confirm_password;
+
+    return body.json();
   }
 }

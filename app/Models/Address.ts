@@ -8,7 +8,7 @@ export default class Address extends BaseModel {
   })
   public id: string;
 
-  @column()
+  @column({ columnName: "zip_code" })
   public zipCode: string;
 
   @column()
@@ -26,13 +26,17 @@ export default class Address extends BaseModel {
   @column()
   public complement: string;
 
-  @column()
+  @column({ columnName: "main_address" })
   public mainAddress: boolean;
 
-  @column.dateTime({ autoCreate: true })
+  @column.dateTime({ columnName: "created_at", autoCreate: true })
   public createdAt: DateTime;
 
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  @column.dateTime({
+    columnName: "updated_at",
+    autoCreate: true,
+    autoUpdate: true,
+  })
   public updatedAt: DateTime;
 
   @beforeCreate()

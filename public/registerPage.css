@@ -1,8 +1,14 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 44px 48px;
+}
+
 .sectionsContainer {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 32px 48px 24px 48px;
 }
 
 .sectionTitle {
@@ -57,4 +63,44 @@
 
 .inputArea::placeholder {
   padding: 10px 0;
+}
+
+.radioLabel {
+  display: flex;
+  color: var(--color-grey0);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 0px;
+  border: 2px solid var(--color-grey4);
+  border-radius: 4px;
+  padding: 18px 28px;
+}
+
+.inputRadio {
+  all: unset;
+}
+
+.radioLabel:focus-within {
+  background-color: var(--color-brand1);
+  border: 2px solid var(--color-brand1);
+  color: var(--color-white);
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-brand1);
+  border-radius: 4px;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 16px;
+  max-width: 315px;
+  padding: 12px 0;
+}
+
+.errorFeedback {
+  color: var(--color-alert1);
+  font-weight: 600;
+  font-size: 16px;
 }

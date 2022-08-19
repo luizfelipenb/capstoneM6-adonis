@@ -32,6 +32,12 @@ export default class CreateUserValidator {
     description: schema.string(),
     password: schema.string(),
     isSeller: schema.boolean(),
+    zipCode: schema.string(),
+    state: schema.string(),
+    city: schema.string(),
+    street: schema.string(),
+    number: schema.string(),
+    confirm_password: schema.string(),
   });
 
   /**

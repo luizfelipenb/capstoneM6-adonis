@@ -11,35 +11,35 @@
             <label for="" class="inputLabel">Nome</label>
             <input type="text" name="name" class="inputText" placeholder="Ex: Samuel Leão">
             @if(flashMessages.has('errors.name'))
-            <p> {{ flashMessages.get('errors.name') }} </p>
+            <p class="errorFeedback"> {{ flashMessages.get('errors.name') }} </p>
             @end
         </div>
         <div class="inputDiv">
             <label for="" class="inputLabel">Email</label>
             <input type="text" name="email"  class="inputText" placeholder="Ex: samuel@kenzie.com.br">
             @if(flashMessages.has('errors.email'))
-            <p> {{ flashMessages.get('errors.email') }} </p>
+            <p class="errorFeedback"> {{ flashMessages.get('errors.email') }} </p>
             @end
         </div>
         <div class="inputDiv">
             <label for="" class="inputLabel">Cpf</label>
             <input type="text" name="cpf" class="inputText" placeholder="000.000.000-00">
             @if(flashMessages.has('errors.cpf'))
-            <p> {{ flashMessages.get('errors.cpf') }} </p>
+            <p class="errorFeedback"> {{ flashMessages.get('errors.cpf') }} </p>
             @end
         </div>
         <div class="inputDiv">
             <label for="" class="inputLabel">Celular</label>
             <input type="text" name="phone" class="inputText" placeholder="(DDD) 90000-0000">
             @if(flashMessages.has('errors.phone'))
-            <p> {{ flashMessages.get('errors.phone') }} </p>
+            <p class="errorFeedback"> {{ flashMessages.get('errors.phone') }} </p>
             @end
         </div>
         <div class="inputDiv">
             <label for="" class="inputLabel">Data de nascimento</label>
             <input type="text" name="birthDate" class="inputText" placeholder="00/00/00">
             @if(flashMessages.has('errors.birthDate'))
-            <p> {{ flashMessages.get('errors.birthDate') }} </p>
+            <p class="errorFeedback"> {{ flashMessages.get('errors.birthDate') }} </p>
             @end
         </div>
         <div class="inputDiv">
@@ -53,7 +53,7 @@
             <label for="" class="inputLabel">CEP</label>
             <input type="text" name="zipCode" class="inputText" placeholder="00000.000">
             @if(flashMessages.has('errors.zipCode'))
-            <p> {{ flashMessages.get('errors.zipCode') }} </p>
+            <p class="errorFeedback"> {{ flashMessages.get('errors.zipCode') }} </p>
             @end
         </div>
         <div class="doubleInputDiv">
@@ -61,14 +61,14 @@
                 <label for="" class="inputLabel">Estado</label>
                 <input type="text" name="state" class="inputText" placeholder="Ex: Sao Paulo">
                 @if(flashMessages.has('errors.state'))
-                <p> {{ flashMessages.get('errors.state') }} </p>
+                <p class="errorFeedback"> {{ flashMessages.get('errors.state') }} </p>
                 @end
             </div>
             <div class="inputDiv">
                 <label for="" class="inputLabel">Cidade</label>
                 <input type="text" name="city" class="inputText" placeholder="Ex: Florianopolis">
                 @if(flashMessages.has('errors.city'))
-                <p> {{ flashMessages.get('errors.city') }} </p>
+                <p class="errorFeedback"> {{ flashMessages.get('errors.city') }} </p>
                 @end
             </div>
         </div>
@@ -76,7 +76,7 @@
             <label for="" class="inputLabel">Rua</label>
             <input type="text" name="street" class="inputText" placeholder="Ex: Rua Augusta">
             @if(flashMessages.has('errors.street'))
-            <p> {{ flashMessages.get('errors.street') }} </p>
+            <p class="errorFeedback"> {{ flashMessages.get('errors.street') }} </p>
             @end
         </div>
         <div class="doubleInputDiv">
@@ -84,7 +84,7 @@
                 <label for="" class="inputLabel">Numero</label>
                 <input type="text" name="number" class="inputText" placeholder="Ex: 596">
                 @if(flashMessages.has('errors.number'))
-                <p> {{ flashMessages.get('errors.number') }} </p>
+                <p class="errorFeedback"> {{ flashMessages.get('errors.number') }} </p>
                 @end
             </div>
             <div class="inputDiv">
@@ -93,6 +93,37 @@
             </div>
         </div>
     </section>
-    <button type="submit">Enviar</button>
+    <section class="sectionsContainer">
+        <h3 class="sectionTitle">Tipo de conta</h3>
+        <div class="doubleInputDiv">
+            <div class="inputCheckDiv">
+                <label class="radioLabel">
+                    <input type="radio" name="isSeller" class="inputRadio" checked value="false">
+                    <span>Comprador</span>
+                </label>               
+            </div>
+            <div class="inputCheckDiv">
+                <label class="radioLabel">
+                    <input type="radio" name="isSeller" class="inputRadio" value="true">
+                    <span>Anunciante</span>
+                </label> 
+            </div>
+        </div>
+        <div class="inputDiv">
+            <label for="" class="inputLabel">Senha</label>
+            <input type="password" name="password" class="inputText" placeholder="Digite sua senha">
+            @if(flashMessages.has('errors.password'))
+            <p class="errorFeedback"> {{ flashMessages.get('errors.password') }} </p>
+            @end
+        </div>
+        <div class="inputDiv">
+            <label for="" class="inputLabel">Confirmar senha</label>
+            <input type="password" name="confirm_password" class="inputText" placeholder="Confirme sua senha">
+            @if(flashMessages.has('errors.confirm_password'))
+            <p class="errorFeedback"> {{ flashMessages.get('errors.confirm_password') }} </p>
+            @end
+        </div>
+    </section>
+    <button type="submit" class="submitButton">Finalizar cadastro</button>
 </form>
 @end

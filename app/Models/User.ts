@@ -1,6 +1,13 @@
 import { DateTime } from "luxon";
-import { BaseModel, beforeCreate, column } from "@ioc:Adonis/Lucid/Orm";
+import {
+  BaseModel,
+  beforeCreate,
+  column,
+  HasMany,
+  hasMany,
+} from "@ioc:Adonis/Lucid/Orm";
 import { v4 as uuid } from "uuid";
+import Address from "./Address";
 
 export default class User extends BaseModel {
   @column({ isPrimary: true })
@@ -18,7 +25,7 @@ export default class User extends BaseModel {
   @column()
   public phone: string;
 
-  @column()
+  @column({ columnName: "birth_date" })
   public birthDate: string;
 
   @column()
@@ -27,16 +34,25 @@ export default class User extends BaseModel {
   @column()
   public password: string;
 
-  @column()
+  @column({ columnName: "is_seller" })
   public isSeller: string;
 
-  @column()
+  @column({ columnName: "is_actve" })
   public isActive: string;
 
-  @column.dateTime({ autoCreate: true })
+  @hasMany(() => Address, {
+    foreignKey: "userId",
+  })
+  public addresses: HasMany<typeof Address>;
+
+  @column.dateTime({ columnName: "created_at", autoCreate: true })
   public createdAt: DateTime;
 
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  @column.dateTime({
+    columnName: "updated_at",
+    autoCreate: true,
+    autoUpdate: true,
+  })
   public updatedAt: DateTime;
 
   @beforeCreate()

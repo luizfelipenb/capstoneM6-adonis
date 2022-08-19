@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:latest
+    env_file:
+      - .env
+    ports:
+      - 55432:5432
+  app:
+    build: ./
+    container_name: capstone-m6-adonis
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - PORT=8080
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
